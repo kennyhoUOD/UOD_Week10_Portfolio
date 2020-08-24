@@ -71,8 +71,7 @@ class MainApplication:
                 Error checking enabled:
                     1.  Check for Missing files
                     2.  Check for input errors. (String instead of Interger)
-                    3.  Check for index issues. (Make sure index columns are correct)
-                    2.  Any errors, Report problem.
+                    3.  Any errors, Report problem.
             """
 
             stock_df = pd.read_csv(data_file, sep=",", parse_dates=[4])                 #1
@@ -98,9 +97,6 @@ class MainApplication:
             raise
         except TypeError :
             print("Input error in csv file. Please check if string and integer are correct")
-            raise
-        except IndexError:
-            print('Index error. Please check column locations (#3) are correct')
             raise
         except Exception as e:
             print("Something went wrong with the CSV file. Please check your data.")
